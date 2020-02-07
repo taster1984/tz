@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <meta charset='utf-8' />
+
+    <link href='packages/core/main.css' rel='stylesheet' />
+    <link href='packages/daygrid/main.css' rel='stylesheet' />
+
+    <script src='packages/core/main.js'></script>
+    <script src='packages/daygrid/main.js'></script>
+	<script src='packages/interaction/main.js'></script>
+
+    <script>
+
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          plugins: [ 'interaction','dayGrid' ],
+		  locale: 'ru',
+		  firstDay: 1,
+		  selectable: true
+		  
+        });
+
+        calendar.render();
+      });
+
+    </script>
+  </head>
+  <body>
+
+    <div id='calendar'></div>
+
+  </body>
+</html>
